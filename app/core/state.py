@@ -34,6 +34,9 @@ class GraphState(TypedDict):
     sources: list[str]
     confidence: float | None
     chunk_previews: list[dict]
+    # Preserve response metadata (including chunk text) through graph execution.
+    metadata: dict
+    cache_hit: bool
 
     cache_hits: dict[str, bool]
     cost_saved_usd: float
